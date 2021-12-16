@@ -3,15 +3,13 @@
 
 #include <QObject>
 
-class ScannerNet : public QObject
+class ScannerNet : QObject
 {
     Q_OBJECT
 public:
+    ScannerNet();
     explicit ScannerNet(QObject *parent = nullptr);
-
-signals:
-
-public slots:
+    static QVector<bool> scanPorts(QStringList ports, QString hostname);
 };
 
 #endif // SCANNERNET_H

@@ -1,4 +1,5 @@
 #include "scannergui.h"
+#include "scannernet.h"
 
 ScannerGui::ScannerGui(QWidget *parent) :
     QWidget(parent)
@@ -8,5 +9,5 @@ ScannerGui::ScannerGui(QWidget *parent) :
 
 void ScannerGui::on_startButton_clicked()
 {
-
+    QStringList portsToScan = portEntry->text;
 }
